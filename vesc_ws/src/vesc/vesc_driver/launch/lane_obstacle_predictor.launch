@@ -1,0 +1,20 @@
+<launch>
+  <node pkg="vesc_driver" type="lane_obstacle_predictor.py" name="lane_obstacle_predictor" output="screen">
+    <!-- frame -->
+    <param name="map_frame" value="map"/>
+    <param name="base_frame" value="base_link"/>
+
+    <!-- 감지/판정 -->
+    <param name="front_sector_deg" value="30.0"/>
+    <param name="obs_dist_thresh"  value="3.0"/>
+    <param name="left_sector_deg"  value="60.0"/>
+    <param name="right_sector_deg" value="60.0"/>
+
+    <!-- 경로 형상 -->
+    <param name="lateral_offset_max" value="0.35"/>
+    <param name="window_len_m"       value="10.0"/>
+    <param name="subset_len_m"       value="30.0"/>
+    <param name="ramp_ratio"         value="0.3"/>
+  </node>
+</launch>
+

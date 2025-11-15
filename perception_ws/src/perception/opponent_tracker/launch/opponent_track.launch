@@ -1,0 +1,6 @@
+<launch>
+
+    <rosparam command="load" file= "/home/jihyun/perception_ws/src/perception/cfg/opponent_tracker_params.yaml" />   
+    <node pkg="perception" type="detect.py" name="detect" output="screen"/> 
+    <node pkg="perception" type="dynamic_tracker_server.py" name="dynamic_tracker_server" output="screen"/>
+</launch>
